@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
-import './Update.dart';
+import './ForgotPassword.dart';
 
 class Login extends StatefulWidget {
   @override
@@ -89,7 +89,7 @@ class _LoginState extends State<Login> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => Update()));
+                                    builder: (context) => ForgotPassword()));
                             // print('forgot link presssed');
                           },
                         ),

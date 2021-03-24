@@ -2,8 +2,8 @@ import 'package:design1/presentation/widget/ElevatedButtons.dart';
 import 'package:design1/presentation/widget/bottom_navigation_buttons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
-import './widget/Header_section.dart';
-import './widget/BottomNavSection.dart';
+import '../widget/Header_section.dart';
+import '../widget/BottomNavSection.dart';
 // import 'package:http/http.dart' as http;
 // import 'dart:convert';
 
@@ -31,14 +31,12 @@ class _ProductsState extends State<Products> {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
+        iconTheme: IconThemeData(color: Colors.black),
         elevation: 0,
         backgroundColor: Colors.white,
-        title: Padding(
-          padding: const EdgeInsets.all(10.0),
-          child: Text(
-            'Products',
-            style: TextStyle(color: Colors.blueGrey.shade700),
-          ),
+        title: Text(
+          'Products',
+          style: TextStyle(color: Colors.blueGrey.shade700),
         ),
       ),
       body: Column(
@@ -61,10 +59,11 @@ class _ProductsState extends State<Products> {
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: Neumorphic(
+                          boxShape: NeumorphicBoxShape.roundRect(
+                              BorderRadius.circular(12)),
                           style: NeumorphicStyle(
                             //shape: NeumorphicShape.concave,
-                            boxShape: NeumorphicBoxShape.roundRect(
-                                BorderRadius.circular(12)),
+
                             depth: 6,
                           ),
                           child: ListTile(
@@ -103,7 +102,7 @@ class _ProductsState extends State<Products> {
           ),
         ],
       ),
-      bottomNavigationBar: bottomNavSection(),
+      bottomNavigationBar: bottomNavSection(context),
     );
   }
 }

@@ -28,9 +28,9 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.0
   material_floating_search_bar: ^0.2.6
-  flutter_neumorphic: ^3.0.3
+  flutter_neumorphic: ^2.2.2
   http: ^0.12.0+4
-  #neumorphic: ^0.4.0
+
 
 dev_dependencies:
   flutter_test:

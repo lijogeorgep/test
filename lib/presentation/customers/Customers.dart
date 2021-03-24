@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
-import './widget/Header_section.dart';
-import 'widget/ElevatedButtons.dart';
-import './widget/BottomNavSection.dart';
+import '../widget/Header_section.dart';
+import '../widget/ElevatedButtons.dart';
+import '../widget/BottomNavSection.dart';
 // import 'widget/bottom_navigation_buttons.dart';
 
-class Reviews extends StatefulWidget {
+class Customers extends StatefulWidget {
   @override
-  _ReviewsState createState() => _ReviewsState();
+  _CustomersState createState() => _CustomersState();
 }
 
-class _ReviewsState extends State<Reviews> {
+class _CustomersState extends State<Customers> {
   var button = ActionButton();
 
   @override
@@ -18,65 +18,17 @@ class _ReviewsState extends State<Reviews> {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
+        iconTheme: IconThemeData(color: Colors.black),
         elevation: 0,
         backgroundColor: Colors.white,
-        title: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Text(
-            'Reviews',
-            style: TextStyle(color: Colors.blueGrey.shade700),
-          ),
+        title: Text(
+          'Customers',
+          style: TextStyle(color: Colors.blueGrey.shade700),
         ),
       ),
       body: Column(
         children: [
-          Expanded(
-            flex: 1,
-            child: Padding(
-              padding: EdgeInsets.all(10),
-              child: Neumorphic(
-                style: NeumorphicStyle(
-                  shape: NeumorphicShape.convex,
-                ),
-                child: TextField(
-                  decoration: InputDecoration(
-                    border: InputBorder.none,
-                    prefixIcon: Icon(
-                      Icons.search,
-                      size: 30.0,
-                    ),
-                  ),
-                ),
-              ),
-            ),
-          ),
-          Expanded(
-            flex: 1,
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  SizedBox(
-                    width: 290,
-                  ),
-                  SizedBox(
-                    height: 50,
-                    width: 100,
-                    child: Neumorphic(
-                      child: TextButton.icon(
-                        label: Text('Filter'),
-                        icon: Icon(Icons.filter_list),
-                        onPressed: () {
-                          //:TODO filter on press funciton
-                        },
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
+          headerSection(text: 'Add Customers'),
           Expanded(
             flex: 8,
             child: ListView.builder(
@@ -87,18 +39,18 @@ class _ReviewsState extends State<Reviews> {
                   return Padding(
                     padding: const EdgeInsets.all(5.0),
                     child: SizedBox(
-                      height: 300,
-                      //    height: MediaQuery.of(context).size.height / 2,
+                      height: MediaQuery.of(context).size.height / 2,
                       child: Card(
                         elevation: 0,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: Neumorphic(
+                          boxShape: NeumorphicBoxShape.roundRect(
+                              BorderRadius.circular(12)),
                           style: NeumorphicStyle(
                             //shape: NeumorphicShape.concave,
-                            boxShape: NeumorphicBoxShape.roundRect(
-                                BorderRadius.circular(12)),
+
                             depth: 6,
                           ),
                           child: Padding(
@@ -118,6 +70,14 @@ class _ReviewsState extends State<Reviews> {
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
+                                    Text('Email:'),
+                                    Text('niya@gmail.com'),
+                                  ],
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
                                     Text('ID:'),
                                     Text('6'),
                                   ],
@@ -126,16 +86,8 @@ class _ReviewsState extends State<Reviews> {
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Text('Comment:'),
-                                    Text('Good'),
-                                  ],
-                                ),
-                                Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Text('Product:'),
-                                    Text('Cotton Churidhar'),
+                                    Text('Gender:'),
+                                    Text('Female'),
                                   ],
                                 ),
                                 Row(
@@ -143,21 +95,26 @@ class _ReviewsState extends State<Reviews> {
                                       MainAxisAlignment.spaceBetween,
                                   children: [
                                     Text('Status:'),
-                                    Container(
-                                        width: 90,
-                                        height: 30,
-                                        decoration: BoxDecoration(
-                                          borderRadius:
-                                              BorderRadius.circular(10),
-                                          color: Colors.green,
-                                        ),
-                                        child: Center(
-                                          child: Text(
-                                            'Active',
-                                            style:
-                                                TextStyle(color: Colors.white),
-                                          ),
-                                        )),
+                                    Text('General'),
+                                  ],
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text('Phone:'),
+                                    Text('+91-342425622'),
+                                  ],
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text('status:'),
+                                    Text(
+                                      'Active',
+                                      style: TextStyle(color: Colors.green),
+                                    ),
                                   ],
                                 ),
                                 Row(
@@ -168,7 +125,15 @@ class _ReviewsState extends State<Reviews> {
                                       onPressed: () {},
                                     ),
                                     IconButton(
-                                      icon: Icon(Icons.delete),
+                                      icon: Icon(Icons.delete_outline),
+                                      onPressed: () {},
+                                    ),
+                                    IconButton(
+                                      icon: Icon(Icons.text_snippet_outlined),
+                                      onPressed: () {},
+                                    ),
+                                    IconButton(
+                                      icon: Icon(Icons.room),
                                       onPressed: () {},
                                     ),
                                   ],
@@ -184,7 +149,7 @@ class _ReviewsState extends State<Reviews> {
           ),
         ],
       ),
-      bottomNavigationBar: bottomNavSection(),
+      bottomNavigationBar: bottomNavSection(context),
     );
   }
 }

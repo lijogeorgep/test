@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
-import './widget/Header_section.dart';
-import 'widget/ElevatedButtons.dart';
-import './widget/BottomNavSection.dart';
+import '../widget/Header_section.dart';
+import '../widget/ElevatedButtons.dart';
+import '../widget/BottomNavSection.dart';
 
 class Attributes extends StatefulWidget {
   @override
@@ -17,14 +17,12 @@ class _AttributesState extends State<Attributes> {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
+        iconTheme: IconThemeData(color: Colors.black),
         elevation: 0,
         backgroundColor: Colors.white,
-        title: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Text(
-            'Attributes',
-            style: TextStyle(color: Colors.blueGrey.shade700),
-          ),
+        title: Text(
+          'Attributes',
+          style: TextStyle(color: Colors.blueGrey.shade700),
         ),
       ),
       body: Column(
@@ -47,10 +45,11 @@ class _AttributesState extends State<Attributes> {
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: Neumorphic(
+                          boxShape: NeumorphicBoxShape.roundRect(
+                              BorderRadius.circular(12)),
                           style: NeumorphicStyle(
                             //shape: NeumorphicShape.concave,
-                            boxShape: NeumorphicBoxShape.roundRect(
-                                BorderRadius.circular(12)),
+
                             depth: 6,
                           ),
                           child: Padding(
@@ -152,7 +151,7 @@ class _AttributesState extends State<Attributes> {
           ),
         ],
       ),
-      bottomNavigationBar: bottomNavSection(),
+      bottomNavigationBar: bottomNavSection(context),
     );
   }
 }

@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'Login.dart';
 
-class Update extends StatefulWidget {
+class ForgotPassword extends StatefulWidget {
   @override
-  _UpdateState createState() => _UpdateState();
+  _ForgotPasswordState createState() => _ForgotPasswordState();
 }
 
-class _UpdateState extends State<Update> {
+class _ForgotPasswordState extends State<ForgotPassword> {
   Widget textFields({String text}) {
     String label = text;
     return TextField(

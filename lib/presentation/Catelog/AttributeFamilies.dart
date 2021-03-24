@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
-import './widget/Header_section.dart';
-import 'widget/ElevatedButtons.dart';
-import './widget/BottomNavSection.dart';
+import '../widget/Header_section.dart';
+import '../widget/ElevatedButtons.dart';
+import '../widget/BottomNavSection.dart';
 // import 'widget/bottom_navigation_buttons.dart';
 
 class AttributeFamilies extends StatefulWidget {
@@ -18,14 +18,12 @@ class _AttributeFamiliesState extends State<AttributeFamilies> {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
+        iconTheme: IconThemeData(color: Colors.black),
         elevation: 0,
         backgroundColor: Colors.white,
-        title: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Text(
-            'Attribute Families',
-            style: TextStyle(color: Colors.blueGrey.shade700),
-          ),
+        title: Text(
+          'Attribute Families',
+          style: TextStyle(color: Colors.blueGrey.shade700),
         ),
       ),
       body: Column(
@@ -46,10 +44,10 @@ class _AttributeFamiliesState extends State<AttributeFamilies> {
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Neumorphic(
+                        boxShape: NeumorphicBoxShape.roundRect(
+                            BorderRadius.circular(12)),
                         style: NeumorphicStyle(
-                          //shape: NeumorphicShape.concave,
-                          boxShape: NeumorphicBoxShape.roundRect(
-                              BorderRadius.circular(12)),
+                          shape: NeumorphicShape.concave,
                           depth: 6,
                         ),
                         child: Padding(
@@ -111,7 +109,7 @@ class _AttributeFamiliesState extends State<AttributeFamilies> {
           ),
         ],
       ),
-      bottomNavigationBar: bottomNavSection(),
+      bottomNavigationBar: bottomNavSection(context),
     );
   }
 }
