@@ -20,7 +20,7 @@ class _DashboardState extends State<Dashboard> {
         ),
       ),
       body: Center(
-        child: Text('dash board'),
+        child: Text('dash board.'),
       ),
     );
   }
