@@ -41,7 +41,7 @@ Widget headerSection({String text}) {
                 button.actionButton(
                     text: text,
                     buttonAction: () {
-                      //:TODO product button fuctionalities..
+                      //:TODO product button fuctionalities...
                     }),
                 SizedBox(
                   width: 120,
