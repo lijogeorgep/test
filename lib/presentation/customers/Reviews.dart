@@ -183,7 +183,7 @@ class _ReviewsState extends State<Reviews> {
           ),
         ],
       ),
-      bottomNavigationBar: bottomNavSection(context),
+
     );
   }
 }

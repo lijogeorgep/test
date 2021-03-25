@@ -102,7 +102,7 @@ class _ProductsState extends State<Products> {
           ),
         ],
       ),
-      bottomNavigationBar: bottomNavSection(context),
+
     );
   }
 }

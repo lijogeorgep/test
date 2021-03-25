@@ -13,14 +13,14 @@ class _DashboardState extends State<Dashboard> {
         elevation: 0,
         backgroundColor: Colors.white,
         title: Text(
-          'Dash Board.',
+          'Dash Board',
           style: TextStyle(
             color: Colors.blueGrey.shade700,
           ),
         ),
       ),
       body: Center(
-        child: Text('dash board.'),
+        child: Text('dash board'),
       ),
     );
   }

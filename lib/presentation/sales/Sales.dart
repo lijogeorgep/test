@@ -18,14 +18,18 @@ class _SalesState extends State<Sales> {
           style: TextStyle(color: Colors.blueGrey.shade700),
         ),
       ),
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Navigator.push(
-                context, MaterialPageRoute(builder: (context) => Orders()));
-          },
-          child: Text('Orders'),
-        ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          ListTile(
+              leading: Text('Orders'),
+              trailing: Icon(Icons.arrow_right),
+              onTap: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => Orders()));
+              }),
+        ],
       ),
     );
   }

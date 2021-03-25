@@ -21,22 +21,23 @@ class _CustomerHomeState extends State<CustomerHome> {
       ),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => Customers()));
-              },
-              child: Text('Customers'),
-            ),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => Reviews()));
-              },
-              child: Text('Reviews'),
-            ),
+            ListTile(
+                leading: Text('Customers'),
+                trailing: Icon(Icons.arrow_right),
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Customers()));
+                }),
+            ListTile(
+                leading: Text('Reviews'),
+                trailing: Icon(Icons.arrow_right),
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Reviews()));
+                }),
           ],
         ),
       ),

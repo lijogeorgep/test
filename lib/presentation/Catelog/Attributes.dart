@@ -151,7 +151,7 @@ class _AttributesState extends State<Attributes> {
           ),
         ],
       ),
-      bottomNavigationBar: bottomNavSection(context),
+
     );
   }
 }

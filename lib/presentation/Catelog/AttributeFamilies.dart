@@ -109,7 +109,7 @@ class _AttributeFamiliesState extends State<AttributeFamilies> {
           ),
         ],
       ),
-      bottomNavigationBar: bottomNavSection(context),
+
     );
   }
 }

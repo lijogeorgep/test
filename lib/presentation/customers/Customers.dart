@@ -149,7 +149,7 @@ class _CustomersState extends State<Customers> {
           ),
         ],
       ),
-      bottomNavigationBar: bottomNavSection(context),
+
     );
   }
 }

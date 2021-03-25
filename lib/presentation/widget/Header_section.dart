@@ -14,6 +14,8 @@ Widget headerSection({String text}) {
           child: Padding(
             padding: EdgeInsets.all(10),
             child: Neumorphic(
+                boxShape: NeumorphicBoxShape.roundRect(
+                    BorderRadius.circular(12)),
               style: NeumorphicStyle(
                 shape: NeumorphicShape.convex,
               ),
@@ -48,6 +50,8 @@ Widget headerSection({String text}) {
                   height: 50,
                   width: 100,
                   child: Neumorphic(
+                    boxShape: NeumorphicBoxShape.roundRect(
+                        BorderRadius.circular(12)),
                     child: TextButton.icon(
                       label: Text('Filter'),
                       icon: Icon(Icons.filter_list),

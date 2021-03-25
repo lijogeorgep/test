@@ -23,34 +23,39 @@ class _CatelogState extends State<Catelog> {
       ),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            ElevatedButton(
-                onPressed: () {
+            ListTile(
+                leading: Text('Products'),
+                trailing: Icon(Icons.arrow_right),
+                onTap: () {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => Products()));
-                },
-                child: Text('Products')),
-            ElevatedButton(
-                onPressed: () {
+                }),
+            ListTile(
+                leading: Text('Categories'),
+                trailing: Icon(Icons.arrow_right),
+                onTap: () {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => Categories()));
-                },
-                child: Text('Categories')),
-            ElevatedButton(
-                onPressed: () {
+                }),
+            ListTile(
+                leading: Text('Attributes'),
+                trailing: Icon(Icons.arrow_right),
+                onTap: () {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => Attributes()));
-                },
-                child: Text('Add Attributes')),
-            ElevatedButton(
-                onPressed: () {
+                }),
+            ListTile(
+                leading: Text('Attribute Families'),
+                trailing: Icon(Icons.arrow_right),
+                onTap: () {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
                           builder: (context) => AttributeFamilies()));
-                },
-                child: Text('Add Family'))
+                }),
           ],
         ),
       ),

@@ -96,7 +96,7 @@ class _CategoriesState extends State<Categories> {
           ),
         ],
       ),
-      bottomNavigationBar: bottomNavSection(context),
+
     );
   }
 }
