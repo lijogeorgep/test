@@ -1,10 +1,12 @@
-import 'file:///C:/flutterprojects/bagisto_shop/lib/presentation/Catelog/AttributeFamilies.dart';
-import 'file:///C:/flutterprojects/bagisto_shop/lib/presentation/Catelog/Categories.dart';
+
 import 'package:flutter/material.dart';
 
+import '../Catelog/AttributeFamilies.dart';
 import '../Catelog/Attributes.dart';
+import '../Catelog/Categories.dart';
+import '../customers/Customers.dart';
 import 'bottom_navigation_buttons.dart';
-import 'file:///C:/flutterprojects/bagisto_shop/lib/presentation/customers/Customers.dart';
+
 Widget bottomNavSection(BuildContext context) {
   // int _selectedIndex = 0;
   // final  List<Widget> _widgetOptions=[
