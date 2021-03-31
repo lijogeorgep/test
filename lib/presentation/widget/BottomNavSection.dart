@@ -35,6 +35,7 @@ Widget bottomNavSection(BuildContext context) {
                       MaterialPageRoute(
                           builder: (context) => Attributes()));
                 }),
+
             bottomNavButton.bottomNavigationButton(
                 icon: Icons.signal_cellular_alt,
                 //  color: Colors.blue,
