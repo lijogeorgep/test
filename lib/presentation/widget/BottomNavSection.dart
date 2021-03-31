@@ -43,7 +43,7 @@ Widget bottomNavSection(BuildContext context) {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => AttributeFamilies()));
+                          builder: (context) => AttributeFamilies()),);
                 }),
             bottomNavButton.bottomNavigationButton(
                 icon: Icons.list_alt,
