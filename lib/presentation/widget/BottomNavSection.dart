@@ -50,7 +50,7 @@ Widget bottomNavSection(BuildContext context) {
                 //  color: Colors.blue,
                 iconButtonAction: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Categories(),));
+                      MaterialPageRoute(builder: (context) => Categories(),),);
                 }),
             bottomNavButton.bottomNavigationButton(
                 icon: Icons.person,
